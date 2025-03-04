@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Tentative - Aiman & Sofea</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?soft-texture,beige') no-repeat center center fixed;
+            background-size: cover;
+            color: #5a3d31; /* Chocolate brown for text */
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Banner Style */
+        .banner {
+            background-color: rgba(241, 224, 206, 0.9); /* Soft nude */
+            text-align: center;
+            padding: 5px 0;
+            z-index: 90;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner h2 {
+            font-family: 'Great Vibes', cursive;
+            color: #8b7355; /* Chocolate brown */
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .banner p {
+            color: #5a3d31; /* Soft chocolate brown */
+            margin: 0;
+            font-size: 1em;
+        }
+
+        /* Sticky Navigation Bar */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(204, 173, 144, 0.9); /* Soft nude brown */
+            padding: 10px;
+            z-index: 100;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sticky-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .sticky-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 20px;
+            background-color: rgba(139, 115, 85, 0.8); /* Chocolate brown */
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .sticky-nav ul li a:hover {
+            background-color: #8b7355; /* Darker chocolate brown */
+            transform: scale(1.1);
+        }
+
+        /* Event Tentative Section */
+        .timeline-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9); /* Soft nude */
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 12px 0;
+            position: relative;
+            padding: 0 10px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 95%;
+            top: 0;
+            height: 100%;
+            width: 1.5px;
+            background-color: #8b7355; /* Chocolate brown */
+            z-index: -1;
+            transform: translateX(-50%);
+        }
+
+        .timeline-time {
+            font-size: 1.1em;
+            color: #8b7355; /* Chocolate brown */
+            font-weight: bold;
+            width: 12%;
+            text-align: center;
+            padding-right: 10px;
+        }
+
+        .timeline-content {
+            font-size: 1.1em;
+            color: #5a3d31; /* Soft chocolate brown */
+            padding-left: 15px;
+            width: 85%;
+        }
+
+        .timeline-content h3 {
+            font-family: 'Great Vibes', cursive;
+            color: #8b7355; /* Chocolate brown */
+            font-size: 1.8em;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item:hover {
+            transform: scale(1.00);
+            color: #b58863; /* Soft nude brown */
+        }
+
+        /* Image Styling (Doves Image) */
+        .dove-image {
+            width: 85%;
+            max-width: 450px;
+            margin-top: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .dove-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Adjustments for smaller screens */
+        @media (max-width: 1000px) {
+            .timeline-container {
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .timeline-time {
+                width: 100%;
+                text-align: left;
+                margin-bottom: 8px;
+            }
+
+            .timeline-content {
+                width: 100%;
+            }
+
+            .dove-image {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Banner (Above Navigation) -->
+<div class="banner">
+    <h2>The Wedding Solemnization of Aiman & Sofea</h2>
+    <p>27 July 2025 | The Majestic Ballroom, Kuala Lumpur</p>
+</div>
+
+<!-- Sticky Navigation Bar (Below Banner) -->
+<nav class="sticky-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-we-met.html">How We Met</a></li>
+        <li><a href="groom-bride.html">Groom & Bride</a></li>
+        <li><a href="event-tentative.html">Event Tentative</a></li>
+        <li><a href="wedding-details.html">Wedding Details</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="rsvp.html">RSVP</a></li>
+        <li><a href="live-wedding.html">Live Stream</a></li>
+    </ul>
+</nav>
+
+<!-- Event Tentative Section -->
+<div class="timeline-container">
+    <div>
+        <div class="timeline-item">
+            <div class="timeline-time">10:00 AM</div>
+            <div class="timeline-content">
+                <h3>Ketibaan Tetamu</h3>
+                <p>Pendaftaran & Sesi Bergambar</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-time">12:00 PM</div>
+            <div class="timeline-content">
+                <h3>Jamuan Makan</h3>
+                <p>Hidangan Tradisional Melayu</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-time">2:00 PM</div>
+            <div class="timeline-content">
+                <h3>Majlis Bersanding</h3>
+                <p>Pelamin Indah</p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <img class="dove-image" src="dove.jpeg" alt="Doves">
+    </div>
+</div>
+
+</body>
+
+</html>

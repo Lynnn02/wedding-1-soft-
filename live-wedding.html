@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Wedding - Aiman & Sofea</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?soft-texture,beige') no-repeat center center fixed;
+            background-size: cover;
+            color: #5a3d31; /* Chocolate brown for text */
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+        }
+
+        /* Banner Style */
+        .banner {
+            background-color: rgba(241, 224, 206, 0.9); /* Soft nude */
+            text-align: center;
+            padding: 10px 0;
+            z-index: 90;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner h2 {
+            font-family: 'Great Vibes', cursive;
+            color: #8b7355; /* Chocolate brown */
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .banner p {
+            color: #5a3d31; /* Soft chocolate brown */
+            margin: 0;
+            font-size: 1em;
+        }
+
+        .title-section {
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 10px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .title-section h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.8em;
+            color: #8b7355; /* Chocolate brown */
+            margin: 0;
+        }
+
+        .title-section p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2em;
+            color: #5a3d31; /* Soft chocolate brown */
+            margin: 5px 0;
+            opacity: 0.9;
+        }
+
+        .divider {
+            width: 200px;
+            height: 1.5px;
+            background-color: #8b7355; /* Chocolate brown */
+            margin: 10px auto;
+            position: relative;
+        }
+
+        .divider:before,
+        .divider:after {
+            content: "❤";
+            font-size: 12px;
+            color: #b58863; /* Soft nude brown */
+            position: absolute;
+            top: -8px;
+        }
+
+        .divider:before {
+            left: -20px;
+        }
+
+        .divider:after {
+            right: -20px;
+        }
+
+        /* Layout Container */
+        .live-wedding-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 20px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .event-details {
+            width: 48%;
+            text-align: left;
+            color: #5a3d31; /* Soft chocolate brown */
+            line-height: 1.6;
+            background-color: rgba(255, 255, 255, 0.9); /* Soft nude */
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .event-details:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-details h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.2em;
+            margin: 10px 0;
+            color: #8b7355; /* Chocolate brown */
+        }
+
+        .event-details p {
+            font-size: 1.1em;
+            margin: 15px 0;
+        }
+
+        .event-details .info {
+            font-size: 1.1em;
+            margin: 10px 0;
+            color: #5a3d31; /* Soft chocolate brown */
+        }
+
+        .event-details .info span {
+            font-weight: bold;
+            color: #8b7355; /* Chocolate brown */
+        }
+
+        .live-stream-container {
+            width: 50%;
+            height: 350px;         
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .live-stream-container iframe {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        /* Sticky Navigation Bar */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(204, 173, 144, 0.9); /* Soft nude brown */
+            padding: 10px;
+            z-index: 100;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sticky-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .sticky-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 20px;
+            background-color: rgba(139, 115, 85, 0.8); /* Chocolate brown */
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .sticky-nav ul li a:hover {
+            background-color: #8b7355; /* Darker chocolate brown */
+            transform: scale(1.1);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .live-wedding-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .event-details,
+            .live-stream-container {
+                width: 100%;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Banner -->
+<div class="banner">
+    <h2>The Wedding Solemnization of Aiman & Sofea</h2>
+    <p>27 July 2025 | The Majestic Ballroom, Kuala Lumpur</p>
+</div>
+
+<!-- Sticky Navigation Bar -->
+<nav class="sticky-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-we-met.html">How We Met</a></li>
+        <li><a href="groom-bride.html">Groom & Bride</a></li>
+        <li><a href="event-tentative.html">Event Tentative</a></li>
+        <li><a href="wedding-details.html">Wedding Details</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="rsvp.html">RSVP</a></li>
+        <li><a href="live-wedding.html">Live Stream</a></li>
+    </ul>
+</nav>
+
+<!-- Title Section -->
+<div class="title-section">
+    <h1>Live Wedding Stream</h1>
+    <p>"Join us as we celebrate our special day!"</p>
+    <div class="divider"></div>
+</div>
+
+<!-- Live Wedding Content -->
+<div class="live-wedding-container">
+    <div class="event-details">
+        <p>We are so excited to have you join us for this special moment. Please feel free to watch the live stream from here and share the love with us as we exchange vows.</p>
+        <div class="info">
+            <p>💍 Wedding Date: 27 July 2025</p>
+            <p>🕒 Time: 10:00 AM - 12:00 PM</p>
+            <p>📍 Channel of Live Stream: Youtube</p>
+        </div>
+    </div>
+
+    <div class="live-stream-container">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Wedding Live Stream" allowfullscreen></iframe>
+    </div>
+</div>
+
+</body>
+
+</html>

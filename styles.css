@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+    background: url('https://source.unsplash.com/1600x900/?soft-texture,beige') no-repeat center center fixed;
+    background-color: rgba(241, 224, 206, 0.9); /* Soft nude */
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: #5a3d31; /* Chocolate brown for text */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Adjust homepage height to fit the screen */
+.homepage {
+    display: flex;
+    height: calc(100vh - 130px);
+    overflow: hidden;
+}
+
+/* Sticky Navigation Bar (Below Banner) */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(204, 173, 144, 0.9); /* Soft nude brown */
+    padding: 10px;
+    z-index: 100;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sticky-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background-color: rgba(139, 115, 85, 0.8); /* Chocolate brown */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.sticky-nav ul li a:hover {
+    background-color: #8b7355; /* Darker chocolate brown */
+    transform: scale(1.1);
+}
+
+/* Banner (Above Navigation) */
+.banner {
+    background-color: rgba(241, 224, 206, 0.9); /* Soft nude */
+    text-align: center;
+    padding: 5px 0;
+    z-index: 90;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.banner h2 {
+    font-family: 'Great Vibes', cursive;
+    color: #8b7355; /* Chocolate brown */
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.banner p {
+    color: #5a3d31; /* Soft chocolate brown */
+    margin: 0;
+    font-size: 1em;
+}
+
+/* Left and Right Side Styles */
+.left-side {
+    width: 50%;
+    background: url('https://source.unsplash.com/1600x900/?wedding-flowers,beige') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-side {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(241, 224, 206, 0.9); /* Soft nude */
+    padding: 30px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Centering the Text Above Countdown */
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5em;
+    color: #8b7355; /* Chocolate brown */
+}
+
+.content .subheading, .content .date {
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: #5a3d31; /* Soft chocolate brown */
+}
+
+/* Countdown Timer */
+.countdown {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.countdown div {
+    background-color: #faf7f5;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #8b7355; /* Chocolate brown */
+    min-width: 80px;
+    transition: transform 0.3s;
+}
+
+.countdown div:hover {
+    transform: scale(1.05);
+}
+
+.countdown div span {
+    display: block;
+    font-size: 0.9em;
+    color: #8b7355; /* Chocolate brown */
+    margin-top: 5px;
+}
+
+/* Remove Underline from Button Text */
+.continue-button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #d3a87c; /* Soft nude brown */
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.continue-button:hover {
+    background-color: #b58863; /* Deeper nude brown */
+    transform: scale(1.1);
+    text-decoration: none;
+}
+
+/* Accessibility Enhancements */
+.continue-button:focus,
+.sticky-nav ul li a:focus {
+    outline: 2px dashed #8b7355; /* Chocolate brown */
+    outline-offset: 3px;
+}
+
+/* Consistent Box Sizing */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}

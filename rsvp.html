@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP - Aiman & Sofea</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?wedding-background') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+        }
+
+        .title-section {
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 10px;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .title-section h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5em;
+            color: #5d737e;
+            margin: 0;
+        }
+
+        .title-section p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1em;
+            color: #333;
+            margin: 5px 0;
+            opacity: 0.8;
+        }
+
+        .divider {
+            width: 200px;
+            height: 1.5px;
+            background-color: #5d737e;
+            margin: 10px auto;
+            position: relative;
+        }
+
+        .divider:before,
+        .divider:after {
+            content: "❤";
+            font-size: 12px;
+            color: #b68973;
+            position: absolute;
+            top: -8px;
+        }
+
+        .divider:before {
+            left: -20px;
+        }
+
+        .divider:after {
+            right: -20px;
+        }
+
+        /* RSVP Section */
+        .rsvp-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: calc(100vh - 250px); /* Adjust height for the content */
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .rsvp-image {
+            width: 100%;
+            max-width: 400px;
+            height: 250px;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .rsvp-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .rsvp-button {
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: #d3a87c; /* Soft nude brown */
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .rsvp-button:hover {
+            background-color: #b58863; /* Deeper nude brown */
+            transform: scale(1.1);
+            text-decoration: none;
+        }
+
+        /* Accessibility Enhancements */
+        .rsvp-button:focus,
+        .sticky-nav ul li a:focus {
+            outline: 2px dashed #8b7355; /* Chocolate brown */
+            outline-offset: 3px;
+        }
+
+        /* Popup Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .popup .message {
+            font-size: 1.2em;
+            color: #5a3d31; /* Soft chocolate brown */
+            margin-bottom: 20px;
+        }
+
+        .popup .close-btn {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #d3a87c; /* Soft nude brown */
+            color: #fff;
+            border: none;
+            border-radius: 30px; /* Rounded corners for consistency */
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .popup .close-btn:hover {
+            background-color: #b58863; /* Deeper nude brown */
+            transform: scale(1.1); /* Smooth hover effect */
+        }
+
+
+        /* Overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .rsvp-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .rsvp-image {
+                width: 100%;
+                height: 300px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    </style>
+</head>
+
+<body>
+
+    <!-- Banner (Above Navigation) -->
+    <div class="banner">
+        <h2>The Wedding Solemnization of Aiman & Sofea</h2>
+        <p>27 July 2025 | The Majestic Ballroom, Kuala Lumpur</p>
+    </div>
+
+    <!-- Sticky Navigation Bar (Below Banner) -->
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="how-we-met.html">How We Met</a></li>
+            <li><a href="groom-bride.html">Groom & Bride</a></li>
+            <li><a href="event-tentative.html">Event Tentative</a></li>
+            <li><a href="wedding-details.html">Wedding Details</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="rsvp.html">RSVP</a></li>
+            <li><a href="live-wedding.html">Live Stream</a></li>
+        </ul>
+    </nav>
+
+    <!-- Title Section -->
+    <div class="title-section">
+        <h1>RSVP</h1>
+        <p>"We would love to know if you can join us!"</p>
+        <div class="divider"></div>
+    </div>
+
+    <!-- RSVP Content -->
+    <div class="rsvp-container">
+        <!-- Invitation Image Section -->
+        <div class="rsvp-image">
+            <img src="rsvp-image.png" alt="Invitation Image">
+        </div>
+        <!-- RSVP Buttons -->
+        <div class="rsvp-buttons">
+            <button class="rsvp-button" onclick="acceptInvitation()">Accept</button>
+            <button class="rsvp-button" onclick="declineInvitation()">Decline</button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Custom Popup -->
+    <div class="popup" id="popup">
+        <div class="message">Thank you for letting us know! We are happy to have you in spirit.</div>
+        <button class="close-btn" onclick="closePopup()">OK</button>
+    </div>
+
+    <script>
+        // Function to handle Accept button click
+        function acceptInvitation() {
+            window.location.href = "https://forms.gle/UwU4GBPxUHYwCTqr5";
+        }
+
+        // Function to handle Decline button click
+        function declineInvitation() {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('popup').style.display = 'block';
+            document.querySelector('.rsvp-buttons').style.display = 'none';  // Hide the buttons after decline
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Location - Aiman & Sofea</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?soft-texture,beige') no-repeat center center fixed;
+            background-size: cover;
+            color: #5a3d31; /* Chocolate brown for text */
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Banner Style */
+        .banner {
+            background-color: rgba(241, 224, 206, 0.9); /* Soft nude */
+            text-align: center;
+            padding: 10px 0;
+            z-index: 90;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .banner h2 {
+            font-family: 'Great Vibes', cursive;
+            color: #8b7355; /* Chocolate brown */
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .banner p {
+            color: #5a3d31; /* Soft chocolate brown */
+            margin: 0;
+            font-size: 1em;
+        }
+
+        /* Sticky Navigation Bar */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background-color: rgba(204, 173, 144, 0.9); /* Soft nude brown */
+            padding: 10px;
+            z-index: 100;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sticky-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .sticky-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 15px;
+            border-radius: 20px;
+            background-color: rgba(139, 115, 85, 0.8); /* Chocolate brown */
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .sticky-nav ul li a:hover {
+            background-color: #8b7355; /* Darker chocolate brown */
+            transform: scale(1.1);
+        }
+
+        /* Wedding Details Section */
+        .details-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 150px);
+            padding: 20px;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .details-box {
+            flex: 1;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9); /* Soft nude */
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 10px;
+        }
+
+        .details2-box {
+    flex: 1;
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+    position: relative;
+    background-image: url('floral.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden; /* Prevents overlay from spilling out */
+}
+
+/* Adding a translucent overlay */
+.details2-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* White overlay with 70% opacity */
+    z-index: 1;
+}
+
+/* Ensure text is above the overlay and add subtle shadow for readability */
+.details2-box h3, .details2-box p {
+    position: relative;
+    z-index: 2;
+    color: #9e3606; /* Soft chocolate brown */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+}
+
+.details-box:hover, .details2-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+        .details-box img {
+            width: 100%;
+            height: auto;
+            max-width: 250px;
+            border-radius: 10px;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .details-box img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 768px) {
+            .details-container {
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+            }
+
+            .details-box, .details2-box {
+                width: 90%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Banner (Above Navigation) -->
+<div class="banner">
+    <h2>The Wedding Solemnization of Aiman & Sofea</h2>
+    <p>27 July 2025 | The Majestic Ballroom, Kuala Lumpur</p>
+</div>
+
+<!-- Sticky Navigation Bar (Below Banner) -->
+<nav class="sticky-nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-we-met.html">How We Met</a></li>
+        <li><a href="groom-bride.html">Groom & Bride</a></li>
+        <li><a href="event-tentative.html">Event Tentative</a></li>
+        <li><a href="wedding-details.html">Wedding Details</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="rsvp.html">RSVP</a></li>
+        <li><a href="live-wedding.html">Live Stream</a></li>
+    </ul>
+</nav>
+
+<!-- Wedding Details Section -->
+<div class="details-container">
+
+    <!-- Wedding Info -->
+    <div class="details2-box">
+        <h3>Wedding Details</h3>
+        <p><span>Address:</span><br> The Majestic Ballroom, Kuala Lumpur, Malaysia</p>
+        <p><span>Contact:</span><br> +60 123-456789</p>
+    </div>
+
+    <!-- QR Code & Venue Image -->
+    <div class="details-box">
+        <h3>Scan for Location</h3>
+        <img src="qr-code.png" alt="QR Code">
+    </div>
+</div>
+
+</body>
+
+</html>

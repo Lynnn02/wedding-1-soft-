@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist - Aiman & Sofea</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: url('https://source.unsplash.com/1600x900/?wedding-background') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .title-section {
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 10px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .title-section h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.5em;
+            color: #5d737e;
+            margin: 0;
+        }
+
+        .title-section p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1em;
+            color: #333;
+            margin: 5px 0;
+            opacity: 0.8;
+        }
+
+        .divider {
+            width: 200px;
+            height: 1.5px;
+            background-color: #5d737e;
+            margin: 10px auto;
+            position: relative;
+        }
+
+        .divider:before,
+        .divider:after {
+            content: "❤";
+            font-size: 12px;
+            color: #b68973;
+            position: absolute;
+            top: -8px;
+        }
+
+        .divider:before {
+            left: -20px;
+        }
+
+        .divider:after {
+            right: -20px;
+        }
+
+        /* Updated Grid Layout for Wishlist */
+        .wishlist-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 37px auto;
+            max-width: 1500px;
+        }
+
+        .wishlist-item {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
+
+        .wishlist-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .wishlist-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .wishlist-item h3 {
+            font-family: 'Great Vibes', cursive;
+            color: #5d737e;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .wishlist-item p {
+            font-size: 0.8em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .wishlist-item p span {
+            font-weight: bold;
+            color: #b68973;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .wishlist-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+    </style>
+</head>
+
+<body>
+
+    <!-- Banner (Above Navigation) -->
+    <div class="banner">
+        <h2>The Wedding Solemnization of Aiman & Sofea</h2>
+        <p>27 July 2025 | The Majestic Ballroom, Kuala Lumpur</p>
+    </div>
+
+    <!-- Sticky Navigation Bar (Below Banner) -->
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="how-we-met.html">How We Met</a></li>
+            <li><a href="groom-bride.html">Groom & Bride</a></li>
+            <li><a href="event-tentative.html">Event Tentative</a></li>
+            <li><a href="wedding-details.html">Wedding Details</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="rsvp.html">RSVP</a></li>
+            <li><a href="live-wedding.html">Live Stream</a></li>
+        </ul>
+    </nav>
+
+    <!-- Title Section -->
+    <div class="title-section">
+        <h1>Wishlist</h1>
+        <p>"Things we dream of and hope to share."</p>
+        <div class="divider"></div>
+    </div>
+
+    <!-- Wishlist Items -->
+    <div class="wishlist-container">
+
+        <!-- Item 1: Honeymoon Fund -->
+        <div class="wishlist-item">
+            <img src="honeymoon_fund_image.png" alt="Honeymoon Fund">
+            <div>
+                <h3>Honeymoon Fund</h3>
+                <p>Help us create unforgettable memories by contributing to our honeymoon fund! We plan to visit the Maldives for a dream vacation.</p>
+            </div>
+        </div>
+
+        <!-- Item 2: Smartwatch -->
+        <div class="wishlist-item">
+            <img src="smartwatch_image.png" alt="Smartwatch">
+            <div>
+                <h3>Smartwatch</h3>
+                <p>A stylish smartwatch to keep us connected and on schedule as we start our new chapter together.</p>
+            </div>
+        </div>
+
+        <!-- Item 3: Dinner Set -->
+        <div class="wishlist-item">
+            <img src="dinner_set_image.png" alt="Dinner Set">
+            <div>
+                <h3>Dinner Set</h3>
+                <p>A beautiful dinner set to celebrate all the special moments we will share in our new home.</p>
+            </div>
+        </div>
+
+        <!-- Item 4: Vacation Gear -->
+        <div class="wishlist-item">
+            <img src="vacation_gear_image.png" alt="Vacation Gear">
+            <div>
+                <h3>Vacation Gear</h3>
+                <p>New luggage and travel gear for all of our future adventures as we explore the world together.</p>
+            </div>
+        </div>
+
+        <!-- Item 5: Home Appliances -->
+        <div class="wishlist-item">
+            <img src="home_appliances_image.png" alt="Home Appliances">
+            <div>
+                <h3>Home Appliances</h3>
+                <p>Help us make our home more comfortable with modern appliances like a coffee maker and blender.</p>
+            </div>
+        </div>
+
+        <!-- Item 6: Custom Art Piece -->
+        <div class="wishlist-item">
+            <img src="custom_art_image.png" alt="Custom Art Piece">
+            <div>
+                <h3>Custom Art Piece</h3>
+                <p>A personalized art piece that symbolizes our love, to hang in our future home.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
